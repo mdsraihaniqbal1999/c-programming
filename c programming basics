@@ -1,1 +1,25 @@
+#include<stdio.h>
+int input(){
+  int i;
+  printf("give the input\n");
+  scanf("%d",&i);
+  return i;
+}
+int compute(int i)
+{
+   i=i+1;
+   return i;
+}
+int output(int i)
+{
+  printf("the number after adding one is:%d",i);
+}
 
+int main()
+{
+  int x,y,z;
+  x=input();
+  z=compute(x);
+  output(z);
+  return 0;
+}
