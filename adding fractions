@@ -1,1 +1,36 @@
+/******************************************************************************
 
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include<conio.h>
+#include <stdlib.h>
+typedef struct _fract{
+    int n;
+    int d;
+} fract;
+
+fract sum(fract f1,fract f2)
+{
+    fract result={(f1.n*f2.d)+(f2.n*f1.d),f1.d*f2.d};
+    return result;
+    
+}
+
+int main()
+{
+    int n1,d1;
+    int n2,d2;
+    printf("enter the the fraction1");
+    scanf("%d%d",&n1,&d1);
+    printf("enter the faction 2\n");
+    scanf("%d%d",&n2,&d2);
+    fract f1={n1,d1};
+    fract f2={n2,d2};
+    fract result=sum(f1,f2);
+    printf("%d", result);
+    }
